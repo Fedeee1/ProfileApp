@@ -69,6 +69,7 @@
         app:layout_constraintEnd_toEndOf="@id/imgProfile"/>
 
     <LinearLayout
+        android:id="@+id/linearInformation"
         android:layout_width="295dp"
         android:layout_height="351dp"
         android:layout_marginStart="40dp"
@@ -112,15 +113,12 @@
             android:layout_width="295dp"
             android:layout_height="48dp"
             android:layout_marginTop="6dp"
-            app:boxCornerRadiusBottomEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusTopStart="8dp">
+            android:background="@drawable/corners_rounded">
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="6555"
+                android:hint=""
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:textAlignment="center"
@@ -182,15 +180,12 @@
             android:layout_width="295dp"
             android:layout_height="48dp"
             android:layout_marginTop="5dp"
-            app:boxCornerRadiusBottomEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusTopStart="8dp">
+            android:background="@drawable/corners_rounded">
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Practicando..."
+                android:hint=""
                 android:imeOptions="actionNext"
                 android:inputType="text"
                 android:textAlignment="center"
@@ -199,6 +194,17 @@
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
+
+    <Button
+        android:layout_width="343dp"
+        android:layout_height="56dp"
+        android:text="Actualizar"
+        android:background="@drawable/corners_rounded"
+        android:textColor="@color/white"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintEnd_toEndOf="@id/navigationTitle"
+        app:layout_constraintStart_toStartOf="@id/navigationTitle"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
