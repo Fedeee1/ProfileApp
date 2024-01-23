@@ -5,13 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    tools:context=".mainModule.views.MainActivity">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationTitle"
         android:layout_width="match_parent"
         android:layout_height="44dp"
-        android:background="#000000"
+        android:background="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -22,7 +23,7 @@
         android:layout_height="24dp"
         android:textAlignment="center"
         android:textSize="18dp"
-        android:text="Editar Perfil"
+        android:text="@string/profileEdit"
         android:fontFamily="@font/roboto_medium"
         android:textColor="@color/white"
         android:background="@color/black"
@@ -35,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_arrow_back"
+        android:contentDescription="@string/imageArrowBack"
         app:layout_constraintTop_toTopOf="@id/navigationTitle"
         app:layout_constraintStart_toStartOf="@id/navigationTitle"
         app:layout_constraintEnd_toStartOf="@id/txtNavTitle"
@@ -44,12 +46,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_close"
+        android:contentDescription="@string/imageClose"
         app:layout_constraintTop_toTopOf="@id/navigationTitle"
         app:layout_constraintStart_toEndOf="@id/txtNavTitle"
         app:layout_constraintEnd_toEndOf="@id/navigationTitle"
         app:layout_constraintBottom_toBottomOf="@id/navigationTitle"/>
 
-    <ImageView
+
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgProfile"
         android:layout_width="152dp"
         android:layout_height="152dp"
@@ -58,15 +62,19 @@
         android:layout_marginEnd="111dp"
         android:background="@drawable/image_rounded"
         android:src="@drawable/image_person"
+        android:translationZ="20dp"
+        app:civ_border_color="@color/white"
         app:layout_constraintEnd_toEndOf="@id/navigationTitle"
         app:layout_constraintStart_toStartOf="@id/navigationTitle"
-        app:layout_constraintTop_toBottomOf="@id/navigationTitle" />
+        app:layout_constraintTop_toBottomOf="@id/navigationTitle"/>
 
     <ImageView
         android:id="@+id/imgOpenGallery"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:src="@drawable/icon_image"
+        android:contentDescription="@string/selectImagen"
+        android:translationZ="20dp"
         app:layout_constraintBottom_toBottomOf="@id/imgProfile"
         app:layout_constraintEnd_toEndOf="@id/imgProfile"/>
 
@@ -87,7 +95,7 @@
             android:layout_height="16dp"
             android:layout_marginStart="24dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="Correo electrónico"
+            android:text="@string/email"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="14dp" />
@@ -97,7 +105,7 @@
             android:layout_height="19dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="10dp"
-            android:text="federico.martinez@vasscompany.com"
+            android:text="@string/myEmail"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="16dp" />
@@ -108,7 +116,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="21dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="Teléfono"
+            android:text="@string/phone"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="14dp" />
@@ -136,7 +144,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="Nombre completo"
+            android:text="@string/fullName"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="14dp" />
@@ -146,7 +154,7 @@
             android:layout_height="19dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="10dp"
-            android:text="Federico Martínez"
+            android:text="@string/myName"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="16dp" />
@@ -157,7 +165,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="Oficina"
+            android:text="@string/office"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="14dp" />
@@ -167,7 +175,7 @@
             android:layout_height="19dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="10dp"
-            android:text="VASS Madrid"
+            android:text="@string/VassAddress"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="16dp" />
@@ -178,7 +186,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="Sobre mi"
+            android:text="@string/aboutMe"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="14dp" />
@@ -193,7 +201,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint=""
-                android:imeOptions="actionNext"
+                android:imeOptions="actionDone"
                 android:inputType="text"
                 android:textAlignment="center"
                 android:textSize="16dp"/>
@@ -208,7 +216,7 @@
         android:layout_marginBottom="24dp"
         android:fontFamily="@font/hk_guise_bold"
         android:background="@drawable/corners_rounded"
-        android:text="Actualizar"
+        android:text="@string/btnUpdate"
         android:textSize="16dp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

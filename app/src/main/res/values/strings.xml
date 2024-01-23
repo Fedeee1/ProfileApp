@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ProfileApp</string>
+    <string name="btnUpdate">Actualizar</string>
+    <string name="aboutMe">Sobre mi</string>
+    <string name="VassAddress">VASS Madrid</string>
+    <string name="office">Oficina</string>
+    <string name="fullName">Nombre completo</string>
+    <string name="myName">Federico Martínez</string>
+    <string name="phone">Teléfono</string>
+    <string name="myEmail">federico.martinez@vasscompany.com</string>
+    <string name="email">Correo electrónico</string>
+    <string name="profileEdit">Editar Perfil</string>
+    <string name="selectImagen">Seleccionar imagen</string>
+    <string name="imageClose">Salir de la vista</string>
+    <string name="imageArrowBack">Volver a la vista anterior</string>
 </resources>
